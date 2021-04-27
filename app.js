@@ -1,61 +1,67 @@
-document.addEventListener('DOMConentLoaded',() =>{
+document.addEventListener('DOMContentLoaded', () => {
+  //card options
+  const cardArray = [
+    {
+      name: 'fries',
+      img: 'images/fries.png'
+    },
+    {
+      name: 'cheeseburger',
+      img: 'images/cheeseburger.png'
+    },
+    {
+      name: 'ice-cream',
+      img: 'images/ice-cream.png'
+    },
+    {
+      name: 'pizza',
+      img: 'images/pizza.png'
+    },
+    {
+      name: 'milkshake',
+      img: 'images/milkshake.png'
+    },
+    {
+      name: 'hotdog',
+      img: 'images/hotdog.png'
+    },
+    {
+      name: 'fries',
+      img: 'images/fries.png'
+    },
+    {
+      name: 'cheeseburger',
+      img: 'images/cheeseburger.png'
+    },
+    {
+      name: 'ice-cream',
+      img: 'images/ice-cream.png'
+    },
+    {
+      name: 'pizza',
+      img: 'images/pizza.png'
+    },
+    {
+      name: 'milkshake',
+      img: 'images/milkshake.png'
+    },
+    {
+      name: 'hotdog',
+      img: 'images/hotdog.png'
+    }
+  ]
 
-//card option - array
-//2 of each
-const cardArray = [
-  {
-    name:'fries',
-    img:'images/fries.png'
-  },
-  {
-    name:'fries',
-    img:'images/fries.png'
-  },
-  {
-    name:'cheeseburger',
-    img:'images/cheeseburger.png'
-  },
-  {
-    name:'cheeseburger',
-    img:'images/cheeseburger.png'
-  },
-  {
-    name:'hotdog',
-    img:'images/hotdog.png'
-  },
-  {
-    name:'hotdog',
-    img:'images/hotdog.png'
-  },
-  {
-    name:'icecream',
-    img:'images/icecream.png'
-  },
-  {
-    name:'icecream',
-    img:'images/icecream.png'
-  },
-  {
-    name:'milkshake',
-    img:'images/milkshake.png'
-  },
-  {
-    name:'milkshake',
-    img:'images/icecream.png'
-  },
-  {
-    name:'pizza',
-    img:'images/pizza.png'
-  },
-  {
-    name:'pizza',
-    img:'images/pizza.png'
-  },
-]
+  const grid = document.querySelector('.grid')
+  //create your board
+  function createBoard() {
+    for (let i = 0; i < cardArray.length; i++) {
+      const card = document.createElement('img')
+      card.setAttribute('src', 'images/blank.png')
+      card.setAttribute('data-id', i)
+      // card.addEventListener('click', flipCard)
+      grid.appendChild(card)
+    }
+  }
+
+  createBoard()
 })
-
-
-
-//creating the game board
-//using querySelector() pick element of gird from html and name grid for javascript
-const grid = document.querySelector.('.grid')
